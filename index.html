@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Powertech — Автоматика №1 в Узбекистане</title>
+  <meta name="description" content="Powertech — официальный дистрибьютор автоматических ворот и систем безопасности в Узбекистане. 5000+ установок, гарантия 3 года, доставка 24ч по Ташкенту." />
+  <meta name="keywords" content="автоматические ворота Ташкент, домофоны Узбекистан, откатные ворота, шлагбаум, Powertech" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Powertech — Автоматика №1 в Узбекистане" />
+  <meta property="og:description" content="5000+ установленных систем. Автоматические ворота, домофоны, шлагбаумы. Гарантия 3 года. Звоните: +998 77 709 99 96" />
+  <meta property="og:image" content="https://powertech-uzbekistan.uz/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:      #0A1628;
+      --navy-mid:  #0D1F3C;
+      --navy-light:#152847;
+      --blue:      #0066FF;
+      --blue-light:#3385FF;
+      --blue-glow: rgba(0,102,255,.25);
+      --cyan:      #00D4FF;
+      --white:     #FFFFFF;
+      --gray-100:  #F4F7FB;
+      --gray-300:  #CBD5E1;
+      --gray-500:  #64748B;
+      --text:      #1E293B;
+      --radius:    16px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--white); color:var(--text); line-height:1.6; overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+    img { max-width:100%; display:block; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .section-tag { display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--blue); background:rgba(0,102,255,.08); border:1px solid rgba(0,102,255,.2); padding:6px 14px; border-radius:100px; margin-bottom:16px; }
+    .section-title { font-size:clamp(1.75rem,4vw,2.75rem); font-weight:800; color:var(--navy); line-height:1.2; margin-bottom:16px; }
+    .section-subtitle { font-size:1.05rem; color:var(--gray-500); max-width:560px; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:12px; font-size:.95rem; font-weight:600; cursor:pointer; transition:var(--transition); border:none; font-family:'Inter',sans-serif; }
+    .btn-primary { background:var(--blue); color:var(--white); box-shadow:0 8px 24px var(--blue-glow); }
+    .btn-primary:hover { background:var(--blue-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,102,255,.4); }
+    .btn-outline { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.4); }
+    .btn-outline:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.7); }
+    .section-head { margin-bottom:56px; }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .6s ease,transform .6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; transition:background var(--transition),box-shadow var(--transition); }
+    header.scrolled { background:rgba(10,22,40,.92); backdrop-filter:blur(20px); box-shadow:0 2px 30px rgba(0,0,0,.3); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:24px; }
+    .logo { display:flex; align-items:center; gap:10px; color:var(--white); font-size:1.3rem; font-weight:800; letter-spacing:-.02em; flex-shrink:0; }
+    .logo-icon { width:36px; height:36px; background:var(--blue); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .logo-icon svg { width:20px; height:20px; fill:none; stroke:#fff; stroke-width:2; }
+    nav { display:flex; gap:4px; }
+    nav a { color:rgba(255,255,255,.75); font-size:.85rem; font-weight:500; padding:8px 12px; border-radius:8px; transition:var(--transition); white-space:nowrap; }
+    nav a:hover { color:#fff; background:rgba(255,255,255,.1); }
+    .header-cta { display:flex; align-items:center; gap:14px; flex-shrink:0; }
+    .header-phone { color:rgba(255,255,255,.85); font-size:.88rem; font-weight:600; display:flex; align-items:center; gap:6px; }
+    .header-phone svg { width:14px; height:14px; }
+    .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border-radius:8px; transition:var(--transition); }
+    .burger:hover { background:rgba(255,255,255,.1); }
+    .burger span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; transition:var(--transition); }
+    .burger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity:0; }
+    .burger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display:none; flex-direction:column; background:rgba(10,22,40,.97); backdrop-filter:blur(20px); padding:16px 24px 24px; gap:4px; }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a { color:rgba(255,255,255,.8); font-size:1rem; font-weight:500; padding:12px 16px; border-radius:10px; transition:var(--transition); }
+    .mobile-nav a:hover { color:#fff; background:rgba(255,255,255,.08); }
+
+    /* ── Hero ───────────────────────────────────────────────── */
+    #hero { min-height:100vh; background:radial-gradient(ellipse 80% 60% at 60% 30%,rgba(0,102,255,.2) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(0,212,255,.12) 0%,transparent 50%),var(--navy); display:flex; align-items:center; position:relative; overflow:hidden; padding-top:72px; }
+    #hero-canvas { position:absolute; inset:0; pointer-events:none; opacity:.35; }
+    .orb { position:absolute; border-radius:50%; filter:blur(80px); opacity:.15; pointer-events:none; }
+    .orb-1 { width:400px; height:400px; background:var(--blue); top:-100px; right:-100px; }
+    .orb-2 { width:300px; height:300px; background:var(--cyan); bottom:-50px; left:10%; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; padding:80px 0; position:relative; z-index:1; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,102,255,.15); border:1px solid rgba(0,102,255,.3); color:var(--cyan); font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:7px 14px; border-radius:100px; margin-bottom:24px; }
+    .hero-badge::before { content:''; width:6px; height:6px; background:var(--cyan); border-radius:50%; animation:pulse 2s ease-in-out infinite; }
+    .hero-title { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:900; color:var(--white); line-height:1.1; letter-spacing:-.03em; margin-bottom:24px; }
+    .hero-title span { background:linear-gradient(135deg,var(--blue-light),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-desc { font-size:1.05rem; color:rgba(255,255,255,.65); margin-bottom:40px; line-height:1.7; }
+    .hero-actions { display:flex; gap:16px; flex-wrap:wrap; }
+    .hero-visual { display:flex; flex-direction:column; gap:16px; }
+    .glass-card { background:rgba(255,255,255,.06); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); padding:24px; }
+    .glass-card-title { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-bottom:12px; }
+    .stat-row { display:flex; gap:24px; }
+    .stat-item { flex:1; }
+    .stat-value { font-size:2rem; font-weight:800; color:var(--white); line-height:1; }
+    .stat-value span { color:var(--blue-light); }
+    .stat-label { font-size:.78rem; color:rgba(255,255,255,.5); margin-top:4px; }
+    .features-mini { display:flex; flex-direction:column; gap:10px; }
+    .feature-row { display:flex; align-items:center; gap:12px; color:rgba(255,255,255,.8); font-size:.9rem; }
+    .feature-dot { width:8px; height:8px; background:var(--blue-light); border-radius:50%; flex-shrink:0; }
+
+    /* ── Stats ──────────────────────────────────────────────── */
+    #stats { background:var(--navy-mid); padding:56px 0; position:relative; overflow:hidden; }
+    #stats::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,102,255,.05) 0%,transparent 60%); }
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; position:relative; }
+    .stat-box { text-align:center; padding:32px 24px; border-right:1px solid rgba(255,255,255,.07); }
+    .stat-box:last-child { border-right:none; }
+    .stat-box-value { font-size:clamp(2rem,4vw,3rem); font-weight:900; color:var(--white); letter-spacing:-.04em; line-height:1; }
+    .stat-box-value .accent { color:var(--blue-light); }
+    .stat-box-label { font-size:.85rem; color:rgba(255,255,255,.5); margin-top:8px; font-weight:500; }
+
+    /* ── Brands ─────────────────────────────────────────────── */
+    #brands { background:var(--white); padding:40px 0; overflow:hidden; border-top:1px solid rgba(0,0,0,.06); border-bottom:1px solid rgba(0,0,0,.06); }
+    .brands-label { text-align:center; font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--gray-300); margin-bottom:24px; }
+    .marquee-wrap { overflow:hidden; }
+    .marquee-track { display:flex; width:max-content; animation:marquee 22s linear infinite; }
+    .marquee-track:hover { animation-play-state:paused; }
+    .marquee-list { display:flex; gap:56px; align-items:center; padding:0 28px; }
+    .brand-item { font-size:1.05rem; font-weight:800; letter-spacing:-.01em; color:var(--gray-300); white-space:nowrap; transition:color var(--transition); cursor:default; user-select:none; }
+    .brand-item:hover { color:var(--blue); }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ── Products ───────────────────────────────────────────── */
+    #products { padding:100px 0; background:var(--gray-100); }
+    .products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .product-card { background:var(--white); border-radius:20px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.06); transition:var(--transition); border:1px solid rgba(0,0,0,.06); }
+    .product-card:hover { transform:translateY(-6px); box-shadow:0 16px 48px rgba(0,102,255,.12); }
+    .product-img { height:200px; display:flex; align-items:center; justify-content:center; font-size:64px; }
+    .product-img-1 { background:linear-gradient(135deg,#0A1628,#152847); }
+    .product-img-2 { background:linear-gradient(135deg,#0D1F3C,#1a3060); }
+    .product-img-3 { background:linear-gradient(135deg,#0A1628,#0D2B5E); }
+    .product-body { padding:24px; }
+    .product-tag { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--blue); background:rgba(0,102,255,.08); padding:4px 10px; border-radius:100px; margin-bottom:10px; }
+    .product-name { font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+    .product-desc { font-size:.88rem; color:var(--gray-500); line-height:1.6; margin-bottom:20px; }
+    .product-link { display:inline-flex; align-items:center; gap:6px; font-size:.88rem; font-weight:600; color:var(--blue); transition:var(--transition); }
+    .product-link:hover { gap:10px; }
+    .product-link svg { width:16px; height:16px; }
+
+    /* ── Calculator ─────────────────────────────────────────── */
+    #calculator { padding:100px 0; background:var(--navy); position:relative; overflow:hidden; }
+    #calculator::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 70% at 80% 50%,rgba(0,102,255,.12) 0%,transparent 60%); }
+    .calc-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; position:relative; }
+    .calc-text .section-title { color:var(--white); }
+    .calc-text .section-subtitle { color:rgba(255,255,255,.6); }
+    .calc-form { background:rgba(255,255,255,.06); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.12); border-radius:24px; padding:36px; }
+    .calc-group { margin-bottom:20px; }
+    .calc-group label { display:flex; justify-content:space-between; align-items:center; font-size:.82rem; font-weight:600; color:rgba(255,255,255,.7); margin-bottom:8px; }
+    .calc-group label .val { color:var(--cyan); font-size:.88rem; }
+    .calc-select { width:100%; background:rgba(255,255,255,.08); border:1.5px solid rgba(255,255,255,.15); border-radius:10px; padding:12px 36px 12px 16px; font-size:.92rem; font-family:'Inter',sans-serif; color:var(--white); outline:none; cursor:pointer; transition:var(--transition); appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ffffff80' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; }
+    .calc-select:focus { border-color:var(--blue); }
+    .calc-select option { background:var(--navy-mid); color:var(--white); }
+    .calc-range { width:100%; appearance:none; height:4px; background:rgba(255,255,255,.15); border-radius:2px; outline:none; cursor:pointer; margin-top:4px; }
+    .calc-range::-webkit-slider-thumb { appearance:none; width:18px; height:18px; background:var(--blue); border-radius:50%; cursor:pointer; box-shadow:0 0 0 4px rgba(0,102,255,.3); transition:box-shadow var(--transition); }
+    .calc-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 6px rgba(0,102,255,.4); }
+    .calc-checkboxes { display:flex; flex-direction:column; gap:10px; margin-top:4px; }
+    .calc-checkbox { display:flex; align-items:center; gap:10px; cursor:pointer; color:rgba(255,255,255,.7); font-size:.88rem; font-weight:500; }
+    .calc-checkbox input { display:none; }
+    .calc-checkbox-box { width:18px; height:18px; border:1.5px solid rgba(255,255,255,.3); border-radius:5px; display:flex; align-items:center; justify-content:center; transition:var(--transition); flex-shrink:0; }
+    .calc-checkbox input:checked ~ .calc-checkbox-box { background:var(--blue); border-color:var(--blue); }
+    .calc-checkbox-box svg { width:10px; height:10px; stroke:#fff; fill:none; stroke-width:3; opacity:0; transition:opacity .2s; }
+    .calc-checkbox input:checked ~ .calc-checkbox-box svg { opacity:1; }
+    .calc-result { margin-top:24px; background:linear-gradient(135deg,rgba(0,102,255,.18),rgba(0,212,255,.08)); border:1px solid rgba(0,102,255,.3); border-radius:16px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .calc-result-label { font-size:.78rem; color:rgba(255,255,255,.55); margin-bottom:4px; }
+    .calc-result-price { font-size:1.5rem; font-weight:900; color:var(--white); letter-spacing:-.02em; }
+    .calc-result-price span { font-size:.85rem; font-weight:500; color:rgba(255,255,255,.5); }
+    .calc-order-btn { background:var(--blue); color:var(--white); border:none; border-radius:10px; padding:11px 20px; font-size:.88rem; font-weight:600; cursor:pointer; transition:var(--transition); white-space:nowrap; font-family:'Inter',sans-serif; }
+    .calc-order-btn:hover { background:var(--blue-light); transform:translateY(-1px); }
+
+    /* ── Advantages ─────────────────────────────────────────── */
+    #advantages { padding:100px 0; }
+    .advantages-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .adv-card { padding:32px; border-radius:20px; border:1px solid rgba(0,0,0,.08); background:var(--white); transition:var(--transition); position:relative; overflow:hidden; }
+    .adv-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--blue),var(--cyan)); opacity:0; transition:var(--transition); }
+    .adv-card:hover { border-color:rgba(0,102,255,.2); box-shadow:0 8px 32px rgba(0,102,255,.08); }
+    .adv-card:hover::before { opacity:1; }
+    .adv-icon { width:52px; height:52px; background:rgba(0,102,255,.08); border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; transition:var(--transition); }
+    .adv-card:hover .adv-icon { background:var(--blue); }
+    .adv-card:hover .adv-icon svg { stroke:#fff!important; }
+    .adv-title { font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:10px; }
+    .adv-desc { font-size:.88rem; color:var(--gray-500); line-height:1.6; }
+
+    /* ── Why ────────────────────────────────────────────────── */
+    #why { background:var(--navy); padding:80px 0; position:relative; overflow:hidden; }
+    #why::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(0,102,255,.15) 0%,transparent 60%); }
+    .why-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; }
+    .why-text .section-title { color:var(--white); }
+    .why-text .section-subtitle { color:rgba(255,255,255,.6); }
+    .why-list { margin-top:32px; display:flex; flex-direction:column; gap:16px; }
+    .why-item { display:flex; align-items:flex-start; gap:14px; }
+    .why-check { width:22px; height:22px; background:var(--blue); border-radius:6px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+    .why-check svg { width:12px; height:12px; stroke:#fff; fill:none; stroke-width:2.5; }
+    .why-item-text { color:rgba(255,255,255,.75); font-size:.95rem; }
+    .why-cards { display:flex; flex-direction:column; gap:16px; }
+    .why-glass { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); padding:22px 26px; display:flex; align-items:center; gap:20px; transition:var(--transition); }
+    .why-glass:hover { background:rgba(255,255,255,.1); border-color:rgba(0,102,255,.4); }
+    .why-glass-icon { font-size:1.9rem; flex-shrink:0; }
+    .why-glass-title { font-size:1rem; font-weight:700; color:var(--white); }
+    .why-glass-sub { font-size:.82rem; color:rgba(255,255,255,.5); margin-top:2px; }
+
+    /* ── Gallery ────────────────────────────────────────────── */
+    #gallery { padding:100px 0; background:var(--white); }
+    .gallery-filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:36px; }
+    .filter-btn { padding:8px 18px; border-radius:100px; border:1.5px solid rgba(0,0,0,.1); background:transparent; font-size:.85rem; font-weight:600; color:var(--gray-500); cursor:pointer; transition:var(--transition); font-family:'Inter',sans-serif; }
+    .filter-btn:hover,.filter-btn.active { background:var(--blue); border-color:var(--blue); color:var(--white); box-shadow:0 4px 14px var(--blue-glow); }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:200px; gap:16px; }
+    .gallery-item { border-radius:16px; overflow:hidden; position:relative; cursor:pointer; transition:var(--transition); }
+    .gallery-item.tall { grid-row:span 2; }
+    .gallery-img { width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:52px; transition:transform .4s ease; }
+    .gallery-bg-1 { background:linear-gradient(135deg,#0A1628,#1a3060); }
+    .gallery-bg-2 { background:linear-gradient(135deg,#0D1F3C,#0055cc); }
+    .gallery-bg-3 { background:linear-gradient(135deg,#152847,#006680); }
+    .gallery-bg-4 { background:linear-gradient(135deg,#0A2040,#003399); }
+    .gallery-bg-5 { background:linear-gradient(135deg,#0D1F3C,#1a4080); }
+    .gallery-bg-6 { background:linear-gradient(135deg,#0A1628,#0044aa); }
+    .gallery-item:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,102,255,.2); }
+    .gallery-item:hover .gallery-img { transform:scale(1.06); }
+    .gallery-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,10,30,.8) 0%,transparent 55%); opacity:0; transition:opacity .3s; display:flex; align-items:flex-end; padding:20px; }
+    .gallery-item:hover .gallery-overlay { opacity:1; }
+    .gallery-overlay-text { color:var(--white); font-size:.88rem; font-weight:600; }
+    .gallery-item.hidden { display:none; }
+
+    /* ── Reviews ────────────────────────────────────────────── */
+    #reviews { padding:100px 0; background:var(--gray-100); }
+    .reviews-carousel { overflow:hidden; }
+    .reviews-track { display:flex; gap:24px; transition:transform .5s cubic-bezier(.4,0,.2,1); will-change:transform; }
+    .review-card { min-width:calc(33.33% - 16px); background:var(--white); border-radius:20px; padding:30px; box-shadow:0 4px 24px rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.06); transition:var(--transition); flex-shrink:0; }
+    .review-card:hover { box-shadow:0 8px 40px rgba(0,102,255,.1); transform:translateY(-4px); }
+    .review-stars { display:flex; gap:3px; margin-bottom:14px; font-size:15px; }
+    .review-text { font-size:.9rem; color:var(--gray-500); line-height:1.7; margin-bottom:18px; }
+    .review-author { display:flex; align-items:center; gap:12px; }
+    .review-avatar { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:700; color:var(--white); flex-shrink:0; }
+    .av-1{background:linear-gradient(135deg,#0066FF,#00D4FF)}.av-2{background:linear-gradient(135deg,#7C3AED,#C084FC)}.av-3{background:linear-gradient(135deg,#059669,#34D399)}.av-4{background:linear-gradient(135deg,#DC2626,#FB923C)}.av-5{background:linear-gradient(135deg,#0891B2,#38BDF8)}.av-6{background:linear-gradient(135deg,#D97706,#FCD34D)}
+    .review-name { font-size:.9rem; font-weight:700; color:var(--navy); }
+    .review-role { font-size:.76rem; color:var(--gray-500); }
+    .carousel-controls { display:flex; align-items:center; justify-content:center; gap:14px; margin-top:36px; }
+    .carousel-btn { width:42px; height:42px; border-radius:50%; border:1.5px solid rgba(0,0,0,.12); background:var(--white); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:var(--transition); color:var(--navy); }
+    .carousel-btn:hover { background:var(--blue); border-color:var(--blue); color:var(--white); }
+    .carousel-btn svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2; }
+    .carousel-dots { display:flex; gap:6px; }
+    .carousel-dot { width:8px; height:8px; border-radius:50%; background:rgba(0,0,0,.15); cursor:pointer; transition:var(--transition); border:none; padding:0; }
+    .carousel-dot.active { background:var(--blue); width:24px; border-radius:4px; }
+
+    /* ── FAQ ────────────────────────────────────────────────── */
+    #faq { padding:100px 0; }
+    .faq-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:64px; align-items:start; }
+    .faq-side .section-subtitle { margin-bottom:32px; }
+    .faq-cta-box { background:var(--navy); border-radius:20px; padding:30px; margin-top:32px; }
+    .faq-cta-box-title { font-size:1rem; font-weight:700; color:var(--white); margin-bottom:6px; }
+    .faq-cta-box-sub { font-size:.85rem; color:rgba(255,255,255,.5); margin-bottom:18px; }
+    .faq-cta-box .btn-primary { width:100%; justify-content:center; }
+    .faq-list { display:flex; flex-direction:column; gap:10px; }
+    .faq-item { border:1.5px solid rgba(0,0,0,.08); border-radius:14px; overflow:hidden; transition:border-color var(--transition); }
+    .faq-item.open { border-color:rgba(0,102,255,.25); }
+    .faq-question { width:100%; background:var(--white); border:none; padding:18px 22px; display:flex; align-items:center; justify-content:space-between; gap:14px; cursor:pointer; font-family:'Inter',sans-serif; font-size:.93rem; font-weight:600; color:var(--navy); text-align:left; transition:background var(--transition); }
+    .faq-question:hover { background:var(--gray-100); }
+    .faq-item.open .faq-question { background:rgba(0,102,255,.04); color:var(--blue); }
+    .faq-icon { width:26px; height:26px; border-radius:7px; background:rgba(0,0,0,.05); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:var(--transition); }
+    .faq-item.open .faq-icon { background:var(--blue); transform:rotate(45deg); }
+    .faq-icon svg { width:13px; height:13px; stroke:currentColor; fill:none; stroke-width:2.5; transition:stroke var(--transition); }
+    .faq-item.open .faq-icon svg { stroke:#fff; }
+    .faq-answer { background:var(--white); max-height:0; overflow:hidden; transition:max-height .35s cubic-bezier(.4,0,.2,1),padding .35s; padding:0 22px; font-size:.88rem; color:var(--gray-500); line-height:1.7; }
+    .faq-item.open .faq-answer { max-height:300px; padding:0 22px 18px; }
+
+    /* ── Contact ────────────────────────────────────────────── */
+    #contact { padding:100px 0; background:var(--gray-100); }
+    .contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:48px; align-items:start; }
+    .contact-info { display:flex; flex-direction:column; gap:30px; }
+    .contact-block { display:flex; gap:16px; align-items:flex-start; }
+    .contact-icon-wrap { width:48px; height:48px; background:var(--blue); border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .contact-icon-wrap svg { width:20px; height:20px; stroke:#fff; fill:none; stroke-width:2; }
+    .contact-block-label { font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); margin-bottom:5px; }
+    .contact-block-value { font-size:.93rem; color:var(--navy); font-weight:500; line-height:1.7; }
+    .contact-block-value a { color:var(--blue); }
+    .contact-block-value a:hover { text-decoration:underline; }
+    .contact-form-wrap { background:var(--white); border-radius:24px; padding:40px; box-shadow:0 8px 40px rgba(0,0,0,.07); }
+    .form-title { font-size:1.4rem; font-weight:800; color:var(--navy); margin-bottom:6px; }
+    .form-sub { font-size:.88rem; color:var(--gray-500); margin-bottom:26px; }
+    .form-group { margin-bottom:14px; }
+    .form-group label { display:block; font-size:.82rem; font-weight:600; color:var(--text); margin-bottom:5px; }
+    .form-group input,.form-group textarea { width:100%; background:var(--gray-100); border:1.5px solid transparent; border-radius:10px; padding:12px 16px; font-size:.92rem; font-family:'Inter',sans-serif; color:var(--text); transition:var(--transition); outline:none; resize:none; }
+    .form-group input:focus,.form-group textarea:focus { border-color:var(--blue); background:var(--white); box-shadow:0 0 0 4px var(--blue-glow); }
+    .form-group textarea { height:100px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .submit-btn { width:100%; justify-content:center; margin-top:4px; font-size:1rem; }
+    .btn-sm { padding:9px 18px; font-size:.84rem; }
+
+    /* ── Map ────────────────────────────────────────────────── */
+    #map { height:420px; background:var(--navy-mid); overflow:hidden; }
+    #map iframe { width:100%; height:100%; border:none; filter:grayscale(30%) contrast(1.1); }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer { background:var(--navy); padding:64px 0 0; }
+    .footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:48px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-brand .logo { margin-bottom:16px; }
+    .footer-brand-desc { font-size:.88rem; color:rgba(255,255,255,.5); line-height:1.7; margin-bottom:22px; }
+    .socials { display:flex; gap:8px; }
+    .social-btn { width:36px; height:36px; background:rgba(255,255,255,.08); border-radius:9px; display:flex; align-items:center; justify-content:center; transition:var(--transition); color:rgba(255,255,255,.6); }
+    .social-btn:hover { background:var(--blue); color:var(--white); }
+    .social-btn svg { width:15px; height:15px; fill:currentColor; }
+    .footer-col-title { font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:18px; }
+    .footer-links { display:flex; flex-direction:column; gap:9px; }
+    .footer-links a { font-size:.88rem; color:rgba(255,255,255,.55); transition:var(--transition); }
+    .footer-links a:hover { color:var(--white); padding-left:4px; }
+    .footer-contact-item { display:flex; gap:10px; margin-bottom:10px; color:rgba(255,255,255,.55); font-size:.86rem; }
+    .footer-contact-item svg { width:14px; height:14px; flex-shrink:0; margin-top:3px; stroke:var(--blue-light); fill:none; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+    .footer-copy { font-size:.82rem; color:rgba(255,255,255,.3); }
+    .footer-made { font-size:.82rem; color:rgba(255,255,255,.22); }
+
+    /* ── Floating chat ──────────────────────────────────────── */
+    .float-chat { position:fixed; bottom:28px; right:28px; z-index:900; display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+    .float-toggle { width:54px; height:54px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 8px 24px rgba(0,102,255,.4); transition:var(--transition); border:none; }
+    .float-toggle:hover { background:var(--blue-light); transform:scale(1.08); }
+    .float-toggle svg { width:22px; height:22px; stroke:#fff; fill:none; stroke-width:2; transition:var(--transition); }
+    .float-toggle .ic-close { display:none; }
+    .float-chat.open .ic-chat { display:none; }
+    .float-chat.open .ic-close { display:block; }
+    .float-menu { display:flex; flex-direction:column; gap:8px; opacity:0; pointer-events:none; transform:translateY(10px) scale(.95); transition:all .25s cubic-bezier(.4,0,.2,1); }
+    .float-chat.open .float-menu { opacity:1; pointer-events:all; transform:none; }
+    .float-btn { display:flex; align-items:center; gap:10px; padding:9px 16px; border-radius:50px; color:var(--white); font-size:.86rem; font-weight:600; white-space:nowrap; box-shadow:0 4px 16px rgba(0,0,0,.2); transition:var(--transition); }
+    .float-btn:hover { transform:translateX(-4px); }
+    .float-btn svg { width:19px; height:19px; flex-shrink:0; }
+    .fb-tg { background:#229ED9; }
+    .fb-tg svg { fill:#fff; }
+    .fb-tg:hover { background:#1a8fc0; }
+    .fb-wa { background:#25D366; }
+    .fb-wa svg { fill:#fff; }
+    .fb-wa:hover { background:#1db954; }
+    .fb-call { background:var(--navy-mid); border:1px solid rgba(255,255,255,.15); }
+    .fb-call svg { stroke:#fff; fill:none; stroke-width:2; }
+    .fb-call:hover { background:var(--navy-light); }
+
+    /* ── Sticky CTA ─────────────────────────────────────────── */
+    .sticky-cta { position:fixed; bottom:0; left:0; right:0; z-index:800; background:rgba(10,22,40,.96); backdrop-filter:blur(16px); border-top:1px solid rgba(0,102,255,.2); padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:14px; transform:translateY(100%); transition:transform .4s cubic-bezier(.4,0,.2,1); }
+    .sticky-cta.visible { transform:translateY(0); }
+    .sticky-cta-text { color:rgba(255,255,255,.75); font-size:.88rem; }
+    .sticky-cta-text strong { color:var(--white); }
+    .sticky-cta-actions { display:flex; gap:10px; align-items:center; flex-shrink:0; }
+    .sticky-cta-phone { color:var(--cyan); font-weight:700; font-size:.92rem; }
+    .sticky-close { background:none; border:none; color:rgba(255,255,255,.35); cursor:pointer; padding:4px; display:flex; align-items:center; transition:color var(--transition); flex-shrink:0; }
+    .sticky-close:hover { color:var(--white); }
+    .sticky-close svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2; }
+
+    /* ── Animations ─────────────────────────────────────────── */
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.7)} }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media(max-width:1024px){
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .stat-box:nth-child(2){border-right:none}
+      .stat-box:nth-child(1),.stat-box:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}
+      .advantages-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .calc-inner{grid-template-columns:1fr;gap:40px}
+      .faq-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      nav,.header-phone{display:none}
+      .burger{display:flex}
+      .hero-grid{grid-template-columns:1fr;gap:40px}
+      .hero-visual{display:none}
+      .products-grid{grid-template-columns:1fr}
+      .advantages-grid{grid-template-columns:1fr}
+      .why-inner{grid-template-columns:1fr;gap:40px}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+      .form-row{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+      .gallery-item.tall{grid-row:auto}
+      .review-card{min-width:calc(80% - 12px)}
+      .sticky-cta-text{display:none}
+    }
+    @media(max-width:480px){
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .stat-box{padding:22px 14px}
+      .hero-actions{flex-direction:column}
+      .btn{justify-content:center}
+      .gallery-grid{grid-template-columns:1fr;grid-auto-rows:200px}
+      .float-chat{bottom:20px;right:16px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        Powertech
+      </a>
+      <nav>
+        <a href="#hero">Главная</a>
+        <a href="#products">Продукты</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#gallery">Работы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+998777099996" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7 12.8 12.8 0 00.7 2.8 2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>
+          +998 77 709 99 96
+        </a>
+        <a href="#contact" class="btn btn-primary" class="btn-sm">Связаться</a>
+      </div>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#hero" class="mobile-link">Главная</a>
+    <a href="#products" class="mobile-link">Продукты</a>
+    <a href="#calculator" class="mobile-link">Калькулятор</a>
+    <a href="#gallery" class="mobile-link">Работы</a>
+    <a href="#reviews" class="mobile-link">Отзывы</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Контакты</a>
+  </div>
+</header>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">Официальный дистрибьютор</div>
+        <h1 class="hero-title">Автоматика<br/><span>№1 в Узбекистане</span></h1>
+        <p class="hero-desc">Автоматические ворота и системы безопасности. Широкий выбор, профессиональный монтаж и 3 года гарантии на всё оборудование.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            Смотреть продукты
+          </a>
+          <a href="#contact" class="btn btn-outline">Получить консультацию</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="glass-card">
+          <div class="glass-card-title">Наши показатели</div>
+          <div class="stat-row">
+            <div class="stat-item"><div class="stat-value">5000<span>+</span></div><div class="stat-label">Установленных систем</div></div>
+            <div class="stat-item"><div class="stat-value">98<span>%</span></div><div class="stat-label">Довольных клиентов</div></div>
+            <div class="stat-item"><div class="stat-value">3<span> г.</span></div><div class="stat-label">Гарантия</div></div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="glass-card-title">Почему выбирают нас</div>
+          <div class="features-mini">
+            <div class="feature-row"><div class="feature-dot"></div>ISO-сертифицированное оборудование</div>
+            <div class="feature-row"><div class="feature-dot"></div>Бесплатная доставка 24ч по Ташкенту</div>
+            <div class="feature-row"><div class="feature-dot"></div>Круглосуточная техническая поддержка</div>
+            <div class="feature-row"><div class="feature-dot"></div>Рассрочка 0% до 12 месяцев</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ══════════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box reveal"><div class="stat-box-value"><span class="counter" data-target="5000">0</span><span class="accent">+</span></div><div class="stat-box-label">Установленных систем</div></div>
+      <div class="stat-box reveal"><div class="stat-box-value"><span class="counter" data-target="98">0</span><span class="accent">%</span></div><div class="stat-box-label">Довольных клиентов</div></div>
+      <div class="stat-box reveal"><div class="stat-box-value"><span class="counter" data-target="3">0</span><span class="accent"> года</span></div><div class="stat-box-label">Официальная гарантия</div></div>
+      <div class="stat-box reveal"><div class="stat-box-value"><span class="counter" data-target="24">0</span><span class="accent">/7</span></div><div class="stat-box-label">Поддержка клиентов</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BRANDS ═════════════════════════════════════════════════ -->
+<section id="brands">
+  <div class="brands-label">Официальный дистрибьютор ведущих мировых брендов</div>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-list">
+        <span class="brand-item">CAME</span><span class="brand-item">FAAC</span><span class="brand-item">BFT</span><span class="brand-item">Nice</span><span class="brand-item">DOORHAN</span><span class="brand-item">HÖRMANN</span><span class="brand-item">SOMFY</span><span class="brand-item">ROGER</span><span class="brand-item">GANT</span><span class="brand-item">AN-MOTORS</span>
+      </div>
+      <div class="marquee-list" aria-hidden="true">
+        <span class="brand-item">CAME</span><span class="brand-item">FAAC</span><span class="brand-item">BFT</span><span class="brand-item">Nice</span><span class="brand-item">DOORHAN</span><span class="brand-item">HÖRMANN</span><span class="brand-item">SOMFY</span><span class="brand-item">ROGER</span><span class="brand-item">GANT</span><span class="brand-item">AN-MOTORS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCTS ════════════════════════════════════════════════ -->
+<section id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Каталог</div>
+      <h2 class="section-title">Наши продукты</h2>
+      <p class="section-subtitle">Широкий ассортимент лучших брендов автоматики для любых задач</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-img product-img-1">🚗</div>
+        <div class="product-body">
+          <div class="product-tag">Автоматика</div>
+          <div class="product-name">Автоматические ворота</div>
+          <p class="product-desc">Откатные, распашные и подъёмные ворота ведущих брендов. Надёжная автоматика для жилых и коммерческих объектов.</p>
+          <a href="#contact" class="product-link">Узнать подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-img product-img-2">🔒</div>
+        <div class="product-body">
+          <div class="product-tag">Безопасность</div>
+          <div class="product-name">Домофоны</div>
+          <p class="product-desc">Видеодомофоны и переговорные устройства высокого качества. HD-камеры, дистанционное управление, мобильное приложение.</p>
+          <a href="#contact" class="product-link">Узнать подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-img product-img-3">⚙️</div>
+        <div class="product-body">
+          <div class="product-tag">Комплектующие</div>
+          <div class="product-name">Аксессуары</div>
+          <p class="product-desc">Пульты, датчики, контроллеры и запасные части для всех видов автоматических систем и ворот.</p>
+          <a href="#contact" class="product-link">Узнать подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CALCULATOR ══════════════════════════════════════════════ -->
+<section id="calculator">
+  <div class="container">
+    <div class="calc-inner">
+      <div class="calc-text reveal">
+        <div class="section-tag">Калькулятор</div>
+        <h2 class="section-title">Рассчитайте стоимость</h2>
+        <p class="section-subtitle">Получите примерную цену за 30 секунд. Точную стоимость рассчитает наш менеджер после выезда специалиста.</p>
+      </div>
+      <div class="calc-form reveal">
+        <div class="calc-group">
+          <label>Тип оборудования</label>
+          <select class="calc-select" id="calcType" onchange="calcPrice()">
+            <option value="900000">Откатные ворота</option>
+            <option value="800000">Распашные ворота</option>
+            <option value="1100000">Подъёмные ворота</option>
+            <option value="600000">Видеодомофон</option>
+            <option value="1200000">Шлагбаум</option>
+          </select>
+        </div>
+        <div class="calc-group">
+          <label>Ширина проёма <span class="val" id="widthVal">3 м</span></label>
+          <input type="range" class="calc-range" id="calcWidth" min="2" max="10" value="3" step="0.5"
+            oninput="calcPrice();document.getElementById('widthVal').textContent=this.value+' м'" />
+        </div>
+        <div class="calc-group">
+          <label>Дополнительно</label>
+          <div class="calc-checkboxes">
+            <label class="calc-checkbox">
+              <input type="checkbox" id="optInstall" onchange="calcPrice()" checked />
+              <div class="calc-checkbox-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+              Профессиональный монтаж (+200 000 сум)
+            </label>
+            <label class="calc-checkbox">
+              <input type="checkbox" id="optGsm" onchange="calcPrice()" />
+              <div class="calc-checkbox-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+              GSM-управление со смартфона (+150 000 сум)
+            </label>
+            <label class="calc-checkbox">
+              <input type="checkbox" id="optExt" onchange="calcPrice()" />
+              <div class="calc-checkbox-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+              Расширенная гарантия 5 лет (+100 000 сум)
+            </label>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div>
+            <div class="calc-result-label">Примерная стоимость</div>
+            <div class="calc-result-price" id="calcResult">1 300 000 <span>сум</span></div>
+          </div>
+          <button class="calc-order-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Заказать →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ADVANTAGES ═════════════════════════════════════════════ -->
+<section id="advantages">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Преимущества</div>
+      <h2 class="section-title">Почему Powertech</h2>
+      <p class="section-subtitle">Полный цикл — от подбора оборудования до послепродажного обслуживания</p>
+    </div>
+    <div class="advantages-grid">
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="adv-title">Гарантия 3 года</div>
+        <p class="adv-desc">Официальная трёхлетняя гарантия. Бесплатное обслуживание и замена неисправных деталей.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="adv-title">Монтаж за 1 день</div>
+        <p class="adv-desc">Профессиональная установка опытными специалистами. Работаем чисто и аккуратно.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a1 1 0 011 1v11a1 1 0 01-1 1H9a1 1 0 01-1-1v-5"/></svg></div>
+        <div class="adv-title">Бесплатная доставка</div>
+        <p class="adv-desc">Доставка за 24 часа по всему Ташкенту бесплатно. Быстрая логистика по регионам.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg></div>
+        <div class="adv-title">Поддержка 24/7</div>
+        <p class="adv-desc">Круглосуточная техподдержка. Всегда ответим и оперативно решим любую проблему.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div class="adv-title">ISO-сертификация</div>
+        <p class="adv-desc">Всё оборудование имеет международные сертификаты ISO. Гарантированное соответствие стандартам.</p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="adv-title">Рассрочка 0%</div>
+        <p class="adv-desc">Оплата частями без переплат до 12 месяцев. Удобные условия для физических и юридических лиц.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ════════════════════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-text reveal">
+        <div class="section-tag">О компании</div>
+        <h2 class="section-title">Лидер рынка автоматики в Узбекистане</h2>
+        <p class="section-subtitle">Более 5000 установленных систем по всему Узбекистану. Работаем с жилыми комплексами, бизнес-центрами и частными домами.</p>
+        <div class="why-list">
+          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Опыт работы более 7 лет на рынке Узбекистана</div></div>
+          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Команда из 50+ сертифицированных специалистов</div></div>
+          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Партнёрство с ведущими мировыми производителями</div></div>
+          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Работаем во всех регионах Узбекистана</div></div>
+        </div>
+      </div>
+      <div class="why-cards reveal">
+        <div class="why-glass"><div class="why-glass-icon">🏆</div><div><div class="why-glass-title">Бренд №1 в автоматике</div><div class="why-glass-sub">Признанный лидер рынка Узбекистана</div></div></div>
+        <div class="why-glass"><div class="why-glass-icon">🔧</div><div><div class="why-glass-title">Профессиональный монтаж</div><div class="why-glass-sub">Установка за 1 рабочий день</div></div></div>
+        <div class="why-glass"><div class="why-glass-icon">📦</div><div><div class="why-glass-title">Большой склад</div><div class="why-glass-sub">Всегда в наличии, без ожидания</div></div></div>
+        <div class="why-glass"><div class="why-glass-icon">💳</div><div><div class="why-glass-title">Рассрочка 0%</div><div class="why-glass-sub">До 12 месяцев без переплат</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═════════════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Портфолио</div>
+      <h2 class="section-title">Выполненные работы</h2>
+      <p class="section-subtitle">Более 5000 объектов по всему Узбекистану — от частных домов до крупных предприятий</p>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">Все работы</button>
+      <button class="filter-btn" data-filter="gates">Ворота</button>
+      <button class="filter-btn" data-filter="intercom">Домофоны</button>
+      <button class="filter-btn" data-filter="barrier">Шлагбаумы</button>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item tall" data-cat="gates"><div class="gallery-img gallery-bg-1">🏠</div><div class="gallery-overlay"><div class="gallery-overlay-text">Откатные ворота, частный дом</div></div></div>
+      <div class="gallery-item" data-cat="intercom"><div class="gallery-img gallery-bg-2">📱</div><div class="gallery-overlay"><div class="gallery-overlay-text">Видеодомофон, жилой комплекс</div></div></div>
+      <div class="gallery-item" data-cat="barrier"><div class="gallery-img gallery-bg-3">🚧</div><div class="gallery-overlay"><div class="gallery-overlay-text">Шлагбаум, бизнес-центр</div></div></div>
+      <div class="gallery-item" data-cat="gates"><div class="gallery-img gallery-bg-4">🏗️</div><div class="gallery-overlay"><div class="gallery-overlay-text">Распашные ворота, предприятие</div></div></div>
+      <div class="gallery-item" data-cat="gates"><div class="gallery-img gallery-bg-5">🔑</div><div class="gallery-overlay"><div class="gallery-overlay-text">Подъёмные ворота, гараж</div></div></div>
+      <div class="gallery-item" data-cat="intercom"><div class="gallery-img gallery-bg-6">🏢</div><div class="gallery-overlay"><div class="gallery-overlay-text">Домофонная система, офис</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═════════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Отзывы</div>
+      <h2 class="section-title">Что говорят клиенты</h2>
+      <p class="section-subtitle">Более 4800 довольных клиентов по всему Узбекистану</p>
+    </div>
+    <div class="reviews-carousel reveal">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Установили откатные ворота за один день. Мастера работали аккуратно, убрали за собой. Ворота работают бесшумно уже больше года — никаких проблем. Рекомендую!»</p><div class="review-author"><div class="review-avatar av-1">А</div><div><div class="review-name">Алишер Каримов</div><div class="review-role">Частный клиент, Ташкент</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Для нашего ЖК поставили видеодомофонную систему. Всё работает чётко, качество изображения отличное. Техподдержка всегда на связи, спасибо команде!»</p><div class="review-author"><div class="review-avatar av-2">М</div><div><div class="review-name">Малика Юсупова</div><div class="review-role">Управляющий ЖК «Нова»</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Обращались по гарантии — всё решили быстро и без вопросов. Подъёмные ворота для гаража работают отлично, пульт берёт даже с улицы. Цена справедливая.»</p><div class="review-author"><div class="review-avatar av-3">Б</div><div><div class="review-name">Бобур Рашидов</div><div class="review-role">Автовладелец, Самарканд</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Поставили шлагбаум на парковку офиса. Интеграция с пропускной системой прошла без проблем. Цена оказалась ниже, чем у конкурентов. Очень доволен.»</p><div class="review-author"><div class="review-avatar av-4">Д</div><div><div class="review-name">Диёра Назарова</div><div class="review-role">Директор ООО «АТМ»</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Замерщик приехал в тот же день. Распашные ворота установили быстро. Качество сварки и монтажа на высшем уровне. Буду заказывать снова!»</p><div class="review-author"><div class="review-avatar av-5">Ф</div><div><div class="review-name">Фарход Исмоилов</div><div class="review-role">Частный клиент, Фергана</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Менеджер помог подобрать домофон под наш бюджет. Установка заняла 2 часа. Всё объяснили, показали как пользоваться. Отличный сервис, рекомендую!»</p><div class="review-author"><div class="review-avatar av-6">Н</div><div><div class="review-name">Нилуфар Хашимова</div><div class="review-role">Частный клиент, Бухара</div></div></div></div>
+      </div>
+    </div>
+    <div class="carousel-controls reveal">
+      <button class="carousel-btn" id="reviewPrev"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="carousel-dots" id="reviewDots"></div>
+      <button class="carousel-btn" id="reviewNext"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Частые вопросы</h2>
+        <p class="section-subtitle">Если не нашли ответ — позвоните нам, ответим за 15 минут.</p>
+        <div class="faq-cta-box">
+          <div class="faq-cta-box-title">Остался вопрос?</div>
+          <div class="faq-cta-box-sub">Специалисты готовы помочь прямо сейчас</div>
+          <a href="tel:+998777099996" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>
+            Позвонить сейчас
+          </a>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Сколько стоит установка автоматических ворот?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Стоимость зависит от типа ворот, ширины проёма и выбранного оборудования. Диапазон — от 800 000 до 5 000 000 сум. Используйте наш калькулятор для предварительного расчёта или оставьте заявку для точного КП.</div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Как долго длится установка?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Стандартная установка — от 4 до 8 часов. Сложные объекты (промышленные ворота, многоквартирные домофоны) — 1–2 дня. После монтажа проводим полное тестирование и инструктаж.</div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Что входит в гарантийное обслуживание?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Гарантия 3 года покрывает: бесплатный выезд мастера, замену неисправных деталей, устранение дефектов монтажа. Не покрывает: механические повреждения по вине пользователя, стихийные бедствия.</div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Есть ли рассрочка или кредит?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Да, рассрочка 0% до 12 месяцев через партнёрские банки. Также доступен потребительский кредит. Для оформления нужен паспорт и ИНН. Уточните детали у менеджера.</div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Работаете ли в регионах Узбекистана?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Да, работаем по всему Узбекистану. В Ташкенте — доставка за 24ч бесплатно. По регионам — 2–3 рабочих дня. Монтажные бригады выезжают в Самарканд, Бухару, Фергану и другие города.</div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Можно ли управлять воротами со смартфона?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-answer">Да, с GSM-модулем вы сможете открывать ворота через приложение и получать уведомления о каждом открытии. Работает на iOS и Android. Стоимость модуля — 150 000 сум.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ══════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Контакты</div>
+      <h2 class="section-title">Свяжитесь с нами</h2>
+      <p class="section-subtitle">Оставьте заявку и мы перезвоним в течение 15 минут</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-block">
+          <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg></div>
+          <div><div class="contact-block-label">Телефоны</div><div class="contact-block-value"><a href="tel:+998777099996">+998 77 709 99 96</a><br/><a href="tel:+998330751550">+998 33 075 15 50</a></div></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-block-label">Email</div><div class="contact-block-value"><a href="mailto:powertech.uz@gmail.com">powertech.uz@gmail.com</a></div></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-block-label">Адрес</div><div class="contact-block-value">Ташкент, Чиланзарский район,<br/>Чиланзарский массив, 17-й квартал, 6</div></div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-block-label">Режим работы</div><div class="contact-block-value">Пн–Пт: 09:00 – 18:00<br/>Сб: 09:00 – 15:00<br/>Тех. поддержка: 24/7</div></div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <div class="form-title">Оставьте заявку</div>
+        <div class="form-sub">Перезвоним в течение 15 минут и ответим на все вопросы</div>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label for="name">Ваше имя</label><input type="text" id="name" placeholder="Иван Иванов" required /></div>
+            <div class="form-group"><label for="phone">Телефон</label><input type="tel" id="phone" placeholder="+998 __ ___ __ __" required /></div>
+          </div>
+          <div class="form-group"><label for="subject">Интересующий продукт</label><input type="text" id="subject" placeholder="Автоматические ворота, домофон..." /></div>
+          <div class="form-group"><label for="message">Сообщение</label><textarea id="message" placeholder="Опишите ваш вопрос или задачу..."></textarea></div>
+          <button type="submit" class="btn btn-primary submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.6!2d69.2!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b28cde00001%3A0xtest!2z0KfQuNC70LDQvdC30LDRgCwg0KLQsNGI0LrQtdC90YIsINGD0LouINCn0LjQu9Cw0L3Qt9Cw0YAsINC60LIuIDE3LCA2!5e0!3m2!1sru!2suz!4v1000000000000" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Расположение Powertech"></iframe>
+</div>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>Powertech</a>
+        <p class="footer-brand-desc">Ведущий дистрибьютор автоматических ворот и систем безопасности в Узбекистане. Качество, надёжность, профессионализм.</p>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.02 9.52c-.15.68-.54.84-1.09.52l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.21-3.02 5.5-4.97c.24-.21-.05-.33-.37-.12L7.41 14.4l-2.96-.92c-.64-.2-.65-.64.14-.95l11.56-4.46c.53-.2 1 .13.79.12z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Навигация</div>
+        <div class="footer-links">
+          <a href="#hero">Главная</a><a href="#products">Продукты</a><a href="#calculator">Калькулятор</a><a href="#gallery">Работы</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Продукты</div>
+        <div class="footer-links">
+          <a href="#products">Автоматические ворота</a><a href="#products">Домофоны</a><a href="#products">Аксессуары</a><a href="#contact">Монтаж</a><a href="#contact">Сервис</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Контакты</div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>+998 77 709 99 96</div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>powertech.uz@gmail.com</div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Ташкент, Чиланзар, 17 квартал, 6</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Powertech. Все права защищены.</div>
+      <div class="footer-made">Автоматика №1 в Узбекистане</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ FLOATING CHAT ═══════════════════════════════════════════ -->
+<div class="float-chat" id="floatChat">
+  <div class="float-menu" id="floatMenu">
+    <a href="https://t.me/powertech_uz" class="float-btn fb-tg"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.02 9.52c-.15.68-.54.84-1.09.52l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.21-3.02 5.5-4.97c.24-.21-.05-.33-.37-.12L7.41 14.4l-2.96-.92c-.64-.2-.65-.64.14-.95l11.56-4.46c.53-.2 1 .13.79.12z"/></svg>Telegram</a>
+    <a href="https://wa.me/998777099996" class="float-btn fb-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.021.5 3.927 1.383 5.604L0 24l6.583-1.345C8.21 23.516 10.066 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.64-.488-5.163-1.341l-.37-.219-3.832.783.815-3.726-.241-.381C2.512 15.596 2 13.854 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>WhatsApp</a>
+    <a href="tel:+998777099996" class="float-btn fb-call"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>Позвонить</a>
+  </div>
+  <button class="float-toggle" id="floatToggle" aria-label="Написать нам">
+    <svg class="ic-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <svg class="ic-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<!-- ═══ STICKY CTA ══════════════════════════════════════════════ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-text"><strong>Бесплатная консультация</strong> — перезвоним за 15 минут</div>
+  <div class="sticky-cta-actions">
+    <a href="tel:+998777099996" class="sticky-cta-phone">+998 77 709 99 96</a>
+    <a href="#contact" class="btn btn-primary" class="btn-sm">Заказать</a>
+  </div>
+  <button class="sticky-close" id="stickyClose" aria-label="Закрыть"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+</div>
+
+<!-- ═══ JAVASCRIPT ══════════════════════════════════════════════ -->
+<script>
+/* ── Header scroll ─────────────────────────────────────────── */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 30), {passive:true});
+
+/* ── Burger ────────────────────────────────────────────────── */
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => { burger.classList.remove('open'); mobileNav.classList.remove('open'); }));
+
+/* ── Scroll reveal ─────────────────────────────────────────── */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => { if(e.isIntersecting){ setTimeout(() => e.target.classList.add('visible'), i * 80); revealObs.unobserve(e.target); } });
+}, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ── Animated counters ─────────────────────────────────────── */
+let countersStarted = false;
+function animateCounters() {
+  if(countersStarted) return;
+  const s = document.getElementById('stats');
+  if(s.getBoundingClientRect().top < window.innerHeight - 80) {
+    countersStarted = true;
+    document.querySelectorAll('.counter').forEach(c => {
+      const target = +c.dataset.target, dur = 1800, t0 = performance.now();
+      const tick = now => { const p = Math.min((now-t0)/dur,1), e = 1-Math.pow(1-p,3); c.textContent = Math.floor(e*target); if(p<1) requestAnimationFrame(tick); else c.textContent = target; };
+      requestAnimationFrame(tick);
+    });
+  }
+}
+window.addEventListener('scroll', animateCounters, {passive:true});
+animateCounters();
+
+/* ── Calculator ────────────────────────────────────────────── */
+function calcPrice() {
+  const base = +document.getElementById('calcType').value;
+  const w    = +document.getElementById('calcWidth').value;
+  const inst = document.getElementById('optInstall').checked ? 200000 : 0;
+  const gsm  = document.getElementById('optGsm').checked ? 150000 : 0;
+  const ext  = document.getElementById('optExt').checked ? 100000 : 0;
+  const total = Math.round((base * (1 + (w - 2) * 0.08) + inst + gsm + ext) / 1000) * 1000;
+  document.getElementById('calcResult').innerHTML = total.toLocaleString('ru') + ' <span>сум</span>';
+}
+calcPrice();
+
+/* ── Gallery filter ────────────────────────────────────────── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const show = f === 'all' || item.dataset.cat === f;
+      item.classList.toggle('hidden', !show);
+    });
+  });
+});
+
+/* ── Reviews carousel ──────────────────────────────────────── */
+const track = document.getElementById('reviewsTrack');
+const cards = track.querySelectorAll('.review-card');
+const dotsContainer = document.getElementById('reviewDots');
+let current = 0;
+const perView = () => window.innerWidth <= 768 ? 1 : 3;
+const total = () => Math.ceil(cards.length / perView());
+
+function buildDots() {
+  dotsContainer.innerHTML = '';
+  for(let i = 0; i < total(); i++) {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === current ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(d);
+  }
+}
+function goTo(n) {
+  current = Math.max(0, Math.min(n, total()-1));
+  const pv = perView();
+  const cardW = track.parentElement.offsetWidth / pv;
+  track.style.transform = `translateX(-${current * pv * cardW + current * 24}px)`;
+  document.querySelectorAll('.carousel-dot').forEach((d,i) => d.classList.toggle('active', i===current));
+}
+document.getElementById('reviewPrev').addEventListener('click', () => goTo(current-1));
+document.getElementById('reviewNext').addEventListener('click', () => goTo(current+1));
+window.addEventListener('resize', () => { current = 0; buildDots(); goTo(0); });
+buildDots();
+
+/* ── FAQ accordion ─────────────────────────────────────────── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+/* ── Floating chat ─────────────────────────────────────────── */
+const floatChat   = document.getElementById('floatChat');
+const floatToggle = document.getElementById('floatToggle');
+floatToggle.addEventListener('click', () => floatChat.classList.toggle('open'));
+document.addEventListener('click', e => { if(!floatChat.contains(e.target)) floatChat.classList.remove('open'); });
+
+/* ── Sticky CTA ────────────────────────────────────────────── */
+const stickyCta   = document.getElementById('stickyCta');
+const stickyClose = document.getElementById('stickyClose');
+let stickyDismissed = false;
+function checkSticky() {
+  if(stickyDismissed) return;
+  stickyCta.classList.toggle('visible', window.scrollY > 500);
+}
+window.addEventListener('scroll', checkSticky, {passive:true});
+stickyClose.addEventListener('click', () => { stickyDismissed = true; stickyCta.classList.remove('visible'); });
+
+/* ── Form submit ───────────────────────────────────────────── */
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 6L9 17l-5-5"/></svg> Заявка отправлена!`;
+  btn.style.background = '#16a34a';
+  setTimeout(() => {
+    btn.disabled = false; btn.style.background = '';
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Отправить заявку`;
+    e.target.reset();
+  }, 3500);
+}
+
+/* ── Phone input format ────────────────────────────────────── */
+const phoneInput = document.getElementById('phone');
+if(phoneInput) phoneInput.addEventListener('input', e => {
+  let v = e.target.value.replace(/\D/g,'');
+  if(v.startsWith('998')) v = '+' + v;
+  else if(v.length > 0 && !v.startsWith('+')) v = '+998' + v;
+  e.target.value = v.slice(0,13);
+});
+
+/* ── Canvas particles ──────────────────────────────────────── */
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  for(let i = 0; i < 55; i++) {
+    particles.push({
+      x: Math.random()*2000, y: Math.random()*900,
+      r: Math.random()*1.8+.4,
+      vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3,
+      a: Math.random()
+    });
+  }
+  function draw() {
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0) p.x=W; if(p.x>W) p.x=0;
+      if(p.y<0) p.y=H; if(p.y>H) p.y=0;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = `rgba(100,170,255,${p.a})`;
+      ctx.fill();
+    });
+    particles.forEach((p,i) => {
+      for(let j = i+1; j < particles.length; j++) {
+        const dx = p.x-particles[j].x, dy = p.y-particles[j].y;
+        const dist = Math.sqrt(dx*dx+dy*dy);
+        if(dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y); ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle = `rgba(80,140,255,${.15*(1-dist/120)})`;
+          ctx.lineWidth = .6;
+          ctx.stroke();
+        }
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
