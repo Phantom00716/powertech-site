@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Страница не найдена | Powertech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0A1628; --blue: #0066FF; --blue-light: #3385FF;
+      --cyan: #00D4FF; --white: #FFFFFF; --gray-500: #64748B;
+    }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    canvas { position: absolute; inset: 0; opacity: .3; pointer-events: none; }
+
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); opacity: .12; pointer-events: none;
+    }
+    .orb-1 { width: 500px; height: 500px; background: var(--blue); top: -150px; right: -100px; }
+    .orb-2 { width: 350px; height: 350px; background: var(--cyan); bottom: -100px; left: -50px; }
+
+    .content { position: relative; z-index: 1; max-width: 520px; }
+
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--white); font-size: 1.2rem; font-weight: 800;
+      letter-spacing: -.02em; margin-bottom: 48px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 34px; height: 34px; background: var(--blue);
+      border-radius: 9px; display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
+
+    .code {
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.06em;
+      background: linear-gradient(135deg, var(--blue-light), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+    p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, .55);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; border-radius: 12px;
+      font-size: .93rem; font-weight: 600;
+      cursor: pointer; transition: all .3s cubic-bezier(.4,0,.2,1);
+      border: none; font-family: 'Inter', sans-serif; text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--blue); color: var(--white);
+      box-shadow: 0 8px 24px rgba(0,102,255,.3);
+    }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,102,255,.45); }
+    .btn-ghost {
+      background: rgba(255,255,255,.07); color: rgba(255,255,255,.75);
+      border: 1.5px solid rgba(255,255,255,.15);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); color: var(--white); }
+    .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .divider {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: .82rem;
+      color: rgba(255,255,255,.3);
+    }
+    .divider a { color: var(--blue-light); }
+    .divider a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="content">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      Powertech
+    </a>
+
+    <div class="code">404</div>
+    <h1>Страница не найдена</h1>
+    <p>Возможно, страница была удалена или вы перешли по устаревшей ссылке. Вернитесь на главную — там найдёте всё необходимое.</p>
+
+    <div class="actions">
+      <a href="index.html" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        На главную
+      </a>
+      <a href="index.html#contact" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.8a2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>
+        Связаться
+      </a>
+    </div>
+
+    <div class="divider">
+      Или позвоните нам: <a href="tel:+998777099996">+998 77 709 99 96</a>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+    let W, H, pts = [];
+    function resize() { W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    for(let i = 0; i < 40; i++) pts.push({ x:Math.random()*2000, y:Math.random()*1000, r:Math.random()*1.6+.4, vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25, a:Math.random()*.8+.2 });
+    function draw() {
+      ctx.clearRect(0,0,W,H);
+      pts.forEach(p => {
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+        if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(100,170,255,${p.a})`; ctx.fill();
+      });
+      pts.forEach((p,i) => { for(let j=i+1;j<pts.length;j++){ const dx=p.x-pts[j].x,dy=p.y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy); if(d<130){ ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(pts[j].x,pts[j].y); ctx.strokeStyle=`rgba(80,140,255,${.14*(1-d/130)})`; ctx.lineWidth=.5; ctx.stroke(); } } });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
