@@ -364,6 +364,7 @@
       .advantages-grid{grid-template-columns:1fr}
       .why-inner{grid-template-columns:1fr;gap:40px}
       .contact-grid{grid-template-columns:1fr}
+      #videos .reveal[style*="grid-template-columns"]{grid-template-columns:1fr!important}
       .footer-grid{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column;gap:8px;text-align:center}
       .form-row{grid-template-columns:1fr}
@@ -396,7 +397,7 @@
         <a href="#hero">Главная</a>
         <a href="#products">Продукты</a>
         <a href="#calculator">Калькулятор</a>
-        <a href="#gallery">Работы</a>
+        <a href="#gallery">Работы</a><a href="#videos">Видео</a>
         <a href="#reviews">Отзывы</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Контакты</a>
@@ -681,6 +682,37 @@
   </div>
 </section>
 
+<!-- ═══ VIDEOS ══════════════════════════════════════════════════ -->
+<section id="videos" style="padding:100px 0;background:var(--navy);">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;">
+      <div class="section-tag" style="color:var(--cyan);background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.2);">Видеообзоры</div>
+      <h2 class="section-title" style="color:var(--white);">Смотрите наши продукты в действии</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.55);margin:0 auto;">Реальные установки, обзоры и демонстрации оборудования Powertech</p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0SD_Mts-oUE" title="Powertech видео 1" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-9X9dVfGAFA" title="Powertech видео 2" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/izCVODLcC9k" title="Powertech видео 3" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QrghdsetDNc" title="Powertech видео 4" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:36px;">
+      <a href="https://www.youtube.com/@maxvision7192" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,.3);">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        Все видео на YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ REVIEWS ═════════════════════════════════════════════════ -->
 <section id="reviews">
   <div class="container">
@@ -691,9 +723,9 @@
     </div>
     <div class="reviews-carousel reveal">
       <div class="reviews-track" id="reviewsTrack">
-        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Установили откатные ворота за один день. Мастера работали аккуратно, убрали за собой. Ворота работают бесшумно уже больше года — никаких проблем. Рекомендую!»</p><div class="review-author"><div class="review-avatar av-1">А</div><div><div class="review-name">Алишер Каримов</div><div class="review-role">Частный клиент, Ташкент</div></div></div></div>
-        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Для нашего ЖК поставили видеодомофонную систему. Всё работает чётко, качество изображения отличное. Техподдержка всегда на связи, спасибо команде!»</p><div class="review-author"><div class="review-avatar av-2">М</div><div><div class="review-name">Малика Юсупова</div><div class="review-role">Управляющий ЖК «Нова»</div></div></div></div>
-        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Обращались по гарантии — всё решили быстро и без вопросов. Подъёмные ворота для гаража работают отлично, пульт берёт даже с улицы. Цена справедливая.»</p><div class="review-author"><div class="review-avatar av-3">Б</div><div><div class="review-name">Бобур Рашидов</div><div class="review-role">Автовладелец, Самарканд</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Полностью обновили систему безопасности для нашего отеля. Мы очень довольны профессионализмом и ответственностью команды Powertech.»</p><div class="review-author"><div class="review-avatar av-1">R</div><div><div class="review-name">Rustam Qodirov</div><div class="review-role">Директор компании, Grand Hotel</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Работать с Powertech было очень удобно. Их профессиональная команда нашла идеальное решение для нашей компании. Теперь контроль доступа полностью автоматизирован.»</p><div class="review-author"><div class="review-avatar av-2">B</div><div><div class="review-name">Bobur Alimov</div><div class="review-role">Управляющий, Atlas Group</div></div></div></div>
+        <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Установили автоматические ворота для дома. Качество отличное, гарантийный срок длительный. Самое главное — техническое обслуживание очень быстрое и качественное.»</p><div class="review-author"><div class="review-avatar av-3">M</div><div><div class="review-name">Malika Saidova</div><div class="review-role">Домовладелица, Ташкент</div></div></div></div>
         <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Поставили шлагбаум на парковку офиса. Интеграция с пропускной системой прошла без проблем. Цена оказалась ниже, чем у конкурентов. Очень доволен.»</p><div class="review-author"><div class="review-avatar av-4">Д</div><div><div class="review-name">Диёра Назарова</div><div class="review-role">Директор ООО «АТМ»</div></div></div></div>
         <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Замерщик приехал в тот же день. Распашные ворота установили быстро. Качество сварки и монтажа на высшем уровне. Буду заказывать снова!»</p><div class="review-author"><div class="review-avatar av-5">Ф</div><div><div class="review-name">Фарход Исмоилов</div><div class="review-role">Частный клиент, Фергана</div></div></div></div>
         <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">«Менеджер помог подобрать домофон под наш бюджет. Установка заняла 2 часа. Всё объяснили, показали как пользоваться. Отличный сервис, рекомендую!»</p><div class="review-author"><div class="review-avatar av-6">Н</div><div><div class="review-name">Нилуфар Хашимова</div><div class="review-role">Частный клиент, Бухара</div></div></div></div>
@@ -803,7 +835,7 @@
       <div>
         <div class="footer-col-title">Навигация</div>
         <div class="footer-links">
-          <a href="#hero">Главная</a><a href="#products">Продукты</a><a href="#calculator">Калькулятор</a><a href="#gallery">Работы</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
+          <a href="#hero">Главная</a><a href="#products">Продукты</a><a href="#calculator">Калькулятор</a><a href="#gallery">Работы</a><a href="#videos">Видео</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a>
         </div>
       </div>
       <div>
