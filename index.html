@@ -791,58 +791,51 @@ function animateCounters() {
 window.addEventListener('scroll', animateCounters, {passive:true});
 animateCounters();
 
-/* ── Calculator ────────────────────────────────────────────── */
-function calcPrice() {
-  const base = +document.getElementById('calcType').value;
-  const w    = +document.getElementById('calcWidth').value;
-  const inst = document.getElementById('optInstall').checked ? 200000 : 0;
-  const gsm  = document.getElementById('optGsm').checked ? 150000 : 0;
-  const ext  = document.getElementById('optExt').checked ? 100000 : 0;
-  const total = Math.round((base * (1 + (w - 2) * 0.08) + inst + gsm + ext) / 1000) * 1000;
-  document.getElementById('calcResult').innerHTML = total.toLocaleString('ru') + ' <span>сум</span>';
-}
-calcPrice();
-
-/* ── Gallery filter ────────────────────────────────────────── */
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      const show = f === 'all' || item.dataset.cat === f;
-      item.classList.toggle('hidden', !show);
-    });
-  });
-});
-
 /* ── Reviews carousel ──────────────────────────────────────── */
 const track = document.getElementById('reviewsTrack');
-const cards = track.querySelectorAll('.review-card');
+const cards = Array.from(track.querySelectorAll('.review-card'));
 const dotsContainer = document.getElementById('reviewDots');
 let current = 0;
 const perView = () => window.innerWidth <= 768 ? 1 : 3;
 const total = () => Math.ceil(cards.length / perView());
 
+function setCardWidths() {
+  const pv = perView();
+  const containerW = track.parentElement.offsetWidth;
+  const cardW = (containerW - (pv - 1) * 24) / pv;
+  cards.forEach(c => { c.style.width = cardW + 'px'; c.style.minWidth = cardW + 'px'; });
+}
+
 function buildDots() {
   dotsContainer.innerHTML = '';
-  for(let i = 0; i < total(); i++) {
+  for (let i = 0; i < total(); i++) {
     const d = document.createElement('button');
     d.className = 'carousel-dot' + (i === current ? ' active' : '');
     d.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(d);
   }
 }
+
 function goTo(n) {
-  current = Math.max(0, Math.min(n, total()-1));
+  current = Math.max(0, Math.min(n, total() - 1));
+  const pv = perView();
   const containerW = track.parentElement.offsetWidth;
-  track.style.transform = `translateX(-${current * (containerW + 24)}px)`;
-  document.querySelectorAll('.carousel-dot').forEach((d,i) => d.classList.toggle('active', i===current));
+  const cardW = (containerW - (pv - 1) * 24) / pv;
+  track.style.transform = `translateX(-${current * pv * (cardW + 24)}px)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
 }
-document.getElementById('reviewPrev').addEventListener('click', () => goTo(current-1));
-document.getElementById('reviewNext').addEventListener('click', () => goTo(current+1));
-window.addEventListener('resize', () => { current = 0; buildDots(); goTo(0); });
-buildDots();
+
+function initCarousel() {
+  setCardWidths();
+  current = 0;
+  buildDots();
+  goTo(0);
+}
+
+document.getElementById('reviewPrev').addEventListener('click', () => goTo(current - 1));
+document.getElementById('reviewNext').addEventListener('click', () => goTo(current + 1));
+window.addEventListener('resize', initCarousel);
+initCarousel();
 
 /* ── FAQ accordion ─────────────────────────────────────────── */
 function toggleFaq(btn) {
