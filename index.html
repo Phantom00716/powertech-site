@@ -5,12 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Powertech — Автоматика №1 в Узбекистане</title>
   <meta name="description" content="Powertech — официальный дистрибьютор автоматических ворот и систем безопасности в Узбекистане. 5000+ установок, гарантия 3 года, доставка 24ч по Ташкенту." />
-  <meta name="keywords" content="автоматические ворота Ташкент, домофоны Узбекистан, откатные ворота, шлагбаум, Powertech" />
+  <meta name="keywords" content="Powertech Узбекистан, автоматические ворота Ташкент, откатные ворота, распашные ворота, шлагбаум, домофон, видеодомофон, системы безопасности Ташкент, автоматика ворот" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://powertech-site.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://powertech-site.vercel.app/" />
   <meta property="og:title" content="Powertech — Автоматика №1 в Узбекистане" />
-  <meta property="og:description" content="5000+ установленных систем. Автоматические ворота, домофоны, шлагбаумы. Гарантия 3 года. Звоните: +998 77 709 99 96" />
-  <meta property="og:image" content="https://powertech-uzbekistan.uz/og-image.jpg" />
+  <meta property="og:description" content="5000+ установленных систем. Автоматические ворота, домофоны, шлагбаумы. Официальный дистрибьютор Powertech. Гарантия 3 года. Звоните: +998 77 709 99 96" />
+  <meta property="og:image" content="https://powertech-site.vercel.app/assets/powertechLogo.50a2b9c4.jpg" />
+  <meta property="og:locale" content="ru_RU" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Powertech — Автоматика №1 в Узбекистане" />
+  <meta name="twitter:description" content="5000+ установленных систем. Автоматические ворота, домофоны, шлагбаумы. Гарантия 3 года." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Powertech",
+    "description": "Официальный дистрибьютор Powertech в Узбекистане. Автоматические ворота, домофоны, шлагбаумы.",
+    "url": "https://powertech-site.vercel.app/",
+    "telephone": ["+998777099996", "+998976041230"],
+    "email": "powertech.uz@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Чиланзарский массив, 17-й квартал, 6",
+      "addressLocality": "Ташкент",
+      "addressCountry": "UZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.271811,
+      "longitude": 69.197816
+    },
+    "openingHours": "Mo-Su 09:00-18:00",
+    "sameAs": [
+      "https://t.me/powertech0",
+      "https://www.instagram.com/powertech.uz",
+      "https://www.youtube.com/@maxvision7192"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -109,16 +143,6 @@
     .stat-box-value .accent { color:var(--blue-light); }
     .stat-box-label { font-size:.85rem; color:rgba(255,255,255,.5); margin-top:8px; font-weight:500; }
 
-    /* ── Brands ─────────────────────────────────────────────── */
-    #brands { background:var(--white); padding:40px 0; overflow:hidden; border-top:1px solid rgba(0,0,0,.06); border-bottom:1px solid rgba(0,0,0,.06); }
-    .brands-label { text-align:center; font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--gray-300); margin-bottom:24px; }
-    .marquee-wrap { overflow:hidden; }
-    .marquee-track { display:flex; width:max-content; animation:marquee 22s linear infinite; }
-    .marquee-track:hover { animation-play-state:paused; }
-    .marquee-list { display:flex; gap:56px; align-items:center; padding:0 28px; }
-    .brand-item { font-size:1.05rem; font-weight:800; letter-spacing:-.01em; color:var(--gray-300); white-space:nowrap; transition:color var(--transition); cursor:default; user-select:none; }
-    .brand-item:hover { color:var(--blue); }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
     /* ── Products ───────────────────────────────────────────── */
     #products { padding:100px 0; background:var(--gray-100); }
@@ -137,35 +161,6 @@
     .product-link:hover { gap:10px; }
     .product-link svg { width:16px; height:16px; }
 
-    /* ── Calculator ─────────────────────────────────────────── */
-    #calculator { padding:100px 0; background:var(--navy); position:relative; overflow:hidden; }
-    #calculator::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 70% at 80% 50%,rgba(0,102,255,.12) 0%,transparent 60%); }
-    .calc-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; position:relative; }
-    .calc-text .section-title { color:var(--white); }
-    .calc-text .section-subtitle { color:rgba(255,255,255,.6); }
-    .calc-form { background:rgba(255,255,255,.06); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.12); border-radius:24px; padding:36px; }
-    .calc-group { margin-bottom:20px; }
-    .calc-group label { display:flex; justify-content:space-between; align-items:center; font-size:.82rem; font-weight:600; color:rgba(255,255,255,.7); margin-bottom:8px; }
-    .calc-group label .val { color:var(--cyan); font-size:.88rem; }
-    .calc-select { width:100%; background:rgba(255,255,255,.08); border:1.5px solid rgba(255,255,255,.15); border-radius:10px; padding:12px 36px 12px 16px; font-size:.92rem; font-family:'Inter',sans-serif; color:var(--white); outline:none; cursor:pointer; transition:var(--transition); appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ffffff80' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; }
-    .calc-select:focus { border-color:var(--blue); }
-    .calc-select option { background:var(--navy-mid); color:var(--white); }
-    .calc-range { width:100%; appearance:none; height:4px; background:rgba(255,255,255,.15); border-radius:2px; outline:none; cursor:pointer; margin-top:4px; }
-    .calc-range::-webkit-slider-thumb { appearance:none; width:18px; height:18px; background:var(--blue); border-radius:50%; cursor:pointer; box-shadow:0 0 0 4px rgba(0,102,255,.3); transition:box-shadow var(--transition); }
-    .calc-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 6px rgba(0,102,255,.4); }
-    .calc-checkboxes { display:flex; flex-direction:column; gap:10px; margin-top:4px; }
-    .calc-checkbox { display:flex; align-items:center; gap:10px; cursor:pointer; color:rgba(255,255,255,.7); font-size:.88rem; font-weight:500; }
-    .calc-checkbox input { display:none; }
-    .calc-checkbox-box { width:18px; height:18px; border:1.5px solid rgba(255,255,255,.3); border-radius:5px; display:flex; align-items:center; justify-content:center; transition:var(--transition); flex-shrink:0; }
-    .calc-checkbox input:checked ~ .calc-checkbox-box { background:var(--blue); border-color:var(--blue); }
-    .calc-checkbox-box svg { width:10px; height:10px; stroke:#fff; fill:none; stroke-width:3; opacity:0; transition:opacity .2s; }
-    .calc-checkbox input:checked ~ .calc-checkbox-box svg { opacity:1; }
-    .calc-result { margin-top:24px; background:linear-gradient(135deg,rgba(0,102,255,.18),rgba(0,212,255,.08)); border:1px solid rgba(0,102,255,.3); border-radius:16px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
-    .calc-result-label { font-size:.78rem; color:rgba(255,255,255,.55); margin-bottom:4px; }
-    .calc-result-price { font-size:1.5rem; font-weight:900; color:var(--white); letter-spacing:-.02em; }
-    .calc-result-price span { font-size:.85rem; font-weight:500; color:rgba(255,255,255,.5); }
-    .calc-order-btn { background:var(--blue); color:var(--white); border:none; border-radius:10px; padding:11px 20px; font-size:.88rem; font-weight:600; cursor:pointer; transition:var(--transition); white-space:nowrap; font-family:'Inter',sans-serif; }
-    .calc-order-btn:hover { background:var(--blue-light); transform:translateY(-1px); }
 
     /* ── Advantages ─────────────────────────────────────────── */
     #advantages { padding:100px 0; }
@@ -352,7 +347,6 @@
       .stat-box:nth-child(1),.stat-box:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}
       .advantages-grid{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-      .calc-inner{grid-template-columns:1fr;gap:40px}
       .faq-grid{grid-template-columns:1fr}
     }
     @media(max-width:768px){
@@ -406,7 +400,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1A19.5 19.5 0 013.1 10.8 19.8 19.8 0 01.1 2.2 2 2 0 012.1 0h3a2 2 0 012 1.7 12.8 12.8 0 00.7 2.8 2 2 0 01-.4 2.1L6.1 7.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>
           +998 77 709 99 96
         </a>
-        <a href="#contact" class="btn btn-primary" class="btn-sm">Связаться</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Связаться</a>
       </div>
       <div class="burger" id="burger"><span></span><span></span><span></span></div>
     </div>
@@ -414,8 +408,8 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#hero" class="mobile-link">Главная</a>
     <a href="#products" class="mobile-link">Продукты</a>
-    <a href="#calculator" class="mobile-link">Калькулятор</a>
     <a href="#gallery" class="mobile-link">Работы</a>
+    <a href="#videos" class="mobile-link">Видео</a>
     <a href="#reviews" class="mobile-link">Отзывы</a>
     <a href="#faq" class="mobile-link">FAQ</a>
     <a href="#contact" class="mobile-link">Контакты</a>
@@ -456,7 +450,7 @@
             <div class="feature-row"><div class="feature-dot"></div>ISO-сертифицированное оборудование</div>
             <div class="feature-row"><div class="feature-dot"></div>Бесплатная доставка 24ч по Ташкенту</div>
             <div class="feature-row"><div class="feature-dot"></div>Круглосуточная техническая поддержка</div>
-            <div class="feature-row"><div class="feature-dot"></div>Рассрочка 0% до 12 месяцев</div>
+            <div class="feature-row"><div class="feature-dot"></div>Официальный дистрибьютор Powertech</div>
           </div>
         </div>
       </div>
@@ -483,7 +477,7 @@
     <div class="section-head reveal">
       <div class="section-tag">Каталог</div>
       <h2 class="section-title">Наши продукты</h2>
-      <p class="section-subtitle">Широкий ассортимент лучших брендов автоматики для любых задач</p>
+      <p class="section-subtitle">Широкий ассортимент оригинальной продукции Powertech для любых задач</p>
     </div>
     <div class="products-grid">
       <div class="product-card reveal">
@@ -554,8 +548,8 @@
       </div>
       <div class="adv-card reveal">
         <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" width="24" height="24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <div class="adv-title">Рассрочка 0%</div>
-        <p class="adv-desc">Оплата частями без переплат до 12 месяцев. Удобные условия для физических и юридических лиц.</p>
+        <div class="adv-title">Официальный дистрибьютор</div>
+        <p class="adv-desc">Мы — единственный официальный дистрибьютор Powertech в Узбекистане. Оригинальное оборудование с завода.</p>
       </div>
     </div>
   </div>
@@ -572,7 +566,7 @@
         <div class="why-list">
           <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Опыт работы более 7 лет на рынке Узбекистана</div></div>
           <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Команда из 50+ сертифицированных специалистов</div></div>
-          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Партнёрство с ведущими мировыми производителями</div></div>
+          <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Единственный официальный дистрибьютор Powertech в Узбекистане</div></div>
           <div class="why-item"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div class="why-item-text">Работаем во всех регионах Узбекистана</div></div>
         </div>
       </div>
@@ -580,7 +574,7 @@
         <div class="why-glass"><div class="why-glass-icon">🏆</div><div><div class="why-glass-title">Бренд №1 в автоматике</div><div class="why-glass-sub">Признанный лидер рынка Узбекистана</div></div></div>
         <div class="why-glass"><div class="why-glass-icon">🔧</div><div><div class="why-glass-title">Профессиональный монтаж</div><div class="why-glass-sub">Установка за 1 рабочий день</div></div></div>
         <div class="why-glass"><div class="why-glass-icon">📦</div><div><div class="why-glass-title">Большой склад</div><div class="why-glass-sub">Всегда в наличии, без ожидания</div></div></div>
-        <div class="why-glass"><div class="why-glass-icon">💳</div><div><div class="why-glass-title">Рассрочка 0%</div><div class="why-glass-sub">До 12 месяцев без переплат</div></div></div>
+        <div class="why-glass"><div class="why-glass-icon">🏅</div><div><div class="why-glass-title">Официальный дистрибьютор</div><div class="why-glass-sub">Только оригинальная продукция Powertech</div></div></div>
       </div>
     </div>
   </div>
